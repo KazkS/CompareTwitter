@@ -1,9 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.5'
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails',      '6.0.3'
 gem 'puma',       '4.3.6'
 gem 'sass-rails', '5.1.0'
@@ -28,6 +25,10 @@ group :test do
   gem 'capybara',           '3.28.0'
   gem 'selenium-webdriver', '3.142.4'
   gem 'webdrivers',         '4.1.2'
+end
+
+group :production do
+  gem 'pg', '1.1.4'
 end
 
 # Windows ではタイムゾーン情報用の tzinfo-data gem を含める必要があります
